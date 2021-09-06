@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ExerciceController!{% endblock %}
+
+{% block body %}
+    <h1>
+        Bonjour, vous êtes dans {{ ville }}
+    </h1>
+
+
+    <h2>
+        Le nombre d'habitans dans votre patelin est : {{ habitants }} milliers d'habitants.
+    
+    </h2>
+
+    <h2>
+        Type :
+        {% if habitants < 1000 %}
+        
+        C'est un village
+          
+
+        {% elseif (habitants >= 1000 and habitants < 10000) %}
+        Petite Ville 
+        
+        {% elseif habitants >= 10000 %}
+        Grande ville 
+
+    </h2>
+
+  
+
+    {% endif %}
+
+   
+
+{% endblock %}
